@@ -11,7 +11,10 @@ function decimalToBinary(input) {
     const quotients = [];
     const remainders = [];
 
-
+    if (input === 0) {
+        result.innerText = '0';
+        return;
+    };
 
     while (input > 0) {
 
@@ -27,6 +30,8 @@ function decimalToBinary(input) {
     console.log('Inputs: ', inputs);
     console.log('Quotients: ', quotients);
     console.log('Remainders: ', remainders);
+
+    result.innerText = remainders.reverse().join('');
 };
 
 // End of Decimal to Binary converter function
