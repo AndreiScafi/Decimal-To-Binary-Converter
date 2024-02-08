@@ -4,6 +4,29 @@ const convertBtn = document.getElementById('convert-btn');
 const result = document.getElementById('result');
 // End of Variables
 
+// Recursion lesson
+
+// Stack example - Last In First Out - LIFO
+const callStack = [
+    'a(): returns "freeCodeCamp " + b()', // Will be executed last
+    'b(): returns "is " + c()', // Will be executed second
+    'c(): returns "awesome!"' // Will be executed first - LIFO
+];
+
+const a = () => {
+    return "freeCodeCamp" + b();
+};
+
+const b = () => {
+    return "is " + c();
+};
+
+const c = () => {
+    return "awesome!";
+};
+// End of Stack example
+// End of Recursion lesson
+
 // Decimal to Binary converter function
 function decimalToBinary(input) {
 
