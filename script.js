@@ -5,7 +5,6 @@ const result = document.getElementById('result');
 // End of Variables
 
 // Recursion lesson
-
 // Stack example - Last In First Out - LIFO
 const callStack = [
     'a(): returns "freeCodeCamp " + b()', // Will be executed last
@@ -25,6 +24,20 @@ const c = () => {
     return "awesome!";
 };
 // End of Stack example
+// Recusion example
+
+function countdown(number) {
+    console.log(number);
+    if (number === 0) {
+        return
+    } else {
+        countdown(number - 1);
+    }
+};
+
+countdown(3);
+
+// End of Recusion example
 // End of Recursion lesson
 
 // Decimal to Binary converter function
