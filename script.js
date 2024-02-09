@@ -37,6 +37,18 @@ function countdown(number) {
 
 countdown(3);
 
+function countDownAndUp(number) {
+    console.log(number);
+    if (number === 0) {
+        console.log('Reached base case');
+        return
+    } else {
+        countDownAndUp(number - 1);
+        console.log(number);
+    }
+};
+
+countDownAndUp(3);
 // End of Recusion example
 // End of Recursion lesson
 
