@@ -35,7 +35,7 @@ function countdown(number) {
     }
 };
 
-countdown(3);
+//countdown(3);
 
 function countDownAndUp(number) {
     console.log(number);
@@ -48,7 +48,7 @@ function countDownAndUp(number) {
     }
 };
 
-countDownAndUp(3);
+//countDownAndUp(3);
 // End of Recusion example
 // End of Recursion lesson
 
@@ -85,18 +85,28 @@ function decimalToBinary(input) {
 
     //New solution
 
-    let binary = '';
+    /*  Better solution 
+      let binary = '';
+  
+      if (input === 0) {
+          binary = '0'
+      };
+  
+      while (input > 0) {
+          binary = (input % 2) + binary;
+          input = Math.floor(input / 2);
+      };
+  
+      result.innerText = binary;  
+      */
 
-    if (input === 0) {
-        binary = '0'
-    };
+    //Solution with recursion
 
-    while (input > 0) {
-        binary = (input % 2) + binary;
-        input = Math.floor(input / 2);
-    };
-
-    result.innerText = binary;
+    if (input === 0 || input === 1) {
+        return String(input);
+    } else {
+        return decimalToBinary(Math.floor(input / 2)) + (input % 2);
+    }
 };
 
 // End of Decimal to Binary converter function
@@ -107,7 +117,7 @@ function checkUserInput() {
         alert('Please provide a decimal number.');
         return;
     };
-    decimalToBinary(parseInt(numberInput.value));
+    result.textContent = decimalToBinary(parseInt(numberInput.value));
     numberInput.value = '';
 };
 // End of Check User Input
