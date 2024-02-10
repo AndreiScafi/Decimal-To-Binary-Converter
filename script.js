@@ -111,13 +111,31 @@ function decimalToBinary(input) {
 
 // End of Decimal to Binary converter function
 
+// Animation Function
+const showAnimation = () => {
+    console.log('free');
+    console.log('Code');
+    console.log('Camp');
+};
+// End of Animation Function
+
 // Check User Input
 function checkUserInput() {
-    if (!numberInput.value || isNaN(parseInt(numberInput.value))) {
+    const inputInt = parseInt(numberInput.value);
+
+    if (!numberInput.value || isNaN(inputInt)) {
         alert('Please provide a decimal number.');
         return;
     };
-    result.textContent = decimalToBinary(parseInt(numberInput.value));
+
+    //Animation
+    if (inputInt === 5) {
+        showAnimation();
+        return;
+    };
+    //End of Animation
+
+    result.textContent = decimalToBinary(inputInt);
     numberInput.value = '';
 };
 // End of Check User Input
