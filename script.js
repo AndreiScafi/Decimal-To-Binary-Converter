@@ -2,6 +2,29 @@
 const numberInput = document.getElementById('number-input');
 const convertBtn = document.getElementById('convert-btn');
 const result = document.getElementById('result');
+
+//Animation
+
+const animationContainer = document.getElementById('animation-container');
+
+const animationData = [
+    {
+        inputVal: 5,
+        marginTop: 300,
+        addElDelay: 1000,
+    },
+    {
+        inputVal: 2,
+        marginTop: -200,
+        addElDelay: 1500,
+    },
+    {
+        inputVal: 1,
+        marginTop: -200,
+        addElDelay: 2000,
+    },
+];
+//End of Animation
 // End of Variables
 
 // Recursion lesson
@@ -113,9 +136,7 @@ function decimalToBinary(input) {
 
 // Animation Function
 const showAnimation = () => {
-    console.log('free');
-    console.log('Code');
-    console.log('Camp');
+
 };
 // End of Animation Function
 
